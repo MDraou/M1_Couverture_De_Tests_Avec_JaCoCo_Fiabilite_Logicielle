@@ -22,7 +22,8 @@ public class TestPalindrome {
     assertThat(Palindrome.isPalindrome("abba")).isTrue();
   }
 
-  @Disabled
+  //@Disabled
+  @Test
   void testOddLengthTrue() {
     assertThat(Palindrome.isPalindrome("aba")).isTrue();
   }

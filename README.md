@@ -15,5 +15,5 @@ Le projet est configuré (via le fichier `.gitlab-ci.yml`) pour produire un jar 
 
 ## Membre(s) du projet
 
-- NOM, prénom du premier membre du projet
-- NOM, prénom du deuxième membre du projet (optionnel)
+- ARTAUD, Cyril
+- DRAOU, Meryem

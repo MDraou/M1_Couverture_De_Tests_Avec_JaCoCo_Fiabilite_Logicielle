@@ -110,6 +110,14 @@ class ComplexTest {
             .isFalse();
   }
 
+  //ajout pour 2.1 :
+  @Test
+  void testZeroTrueAndFalse() {
+    Complex z = new Complex(0.0F, 1.0F);
+    assertThat(z.isZero()).as("problem with isZero on Zero Complex number")
+            .isFalse();
+  }
+
   @Test
   void testSumReal() {
     float expected = 1.0F + 3.0F;
@@ -148,19 +156,6 @@ class ComplexTest {
     z = z1.product(z2);
     assertThat(z.getImaginaryPart()).as("problem with imaginary part of Product")
             .isCloseTo(expected, within(EPSILON));
-
-
-  }
-
-
-  // TODO: Write a test that fails if computation with infinite takes too long
-
-  //@Disabled
-  @Test
-  final void testTimeoutInfinite() {
-
-    //fail("NYI");
-    assertTimeoutPreemptively(Duration.ofMillis(100), ()->Complex.infinite());
   }
 
   @Test
@@ -184,6 +179,12 @@ class ComplexTest {
     assertThatThrownBy(() -> {
       z.inverse();
     }).isInstanceOf(IllegalArgumentException.class).hasMessage(null);
+  }
+
+  @Test
+  void testToString() {
+    z = new Complex(3.0F, -5.0F);
+    assertThat(z.toString()).as("problem with string part of toString").isEqualTo("3.0 + (-5.0i)");
   }
 
 }

@@ -54,18 +54,7 @@ public class Complex {
 
     @Override
     public String toString() {
-        return realPart + "+i" + imaginaryPart;
+        return realPart + " + (" + imaginaryPart + "i)";
     }
 
-    public static void infinite()
-    {
-        // TODO: add code
-        try {
-            while(true) {
-                Thread.sleep(100);
-            }
-        }catch (InterruptedException e) {
-            System.err.println("timeout interruption");
-        }
-    }
 }

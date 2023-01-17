@@ -16,9 +16,15 @@ class TestStringArray {
           "ab", "ccd", "ccc", "g", "f", "e", "d"
   };
 
+  private static String[] slist3 = {
+          "ab", "ab"
+  };
+
+
   private StringArray array1;
   private StringArray array2;
 
+  private  StringArray array3;
   @BeforeAll
   static void setUpBeforeClass() throws Exception {
     System.out.println("debut des tests");
@@ -49,6 +55,13 @@ class TestStringArray {
   void testStringArray2() {
     array2 = new StringArray(slist2);
     assertThat(array2.size()).isEqualTo(7);
+  }
+
+  //2.2.5
+  @Test
+  void testStringArray3() {
+    array3 = new StringArray(slist3);
+    assertThat(array3.size()).isEqualTo(1);
   }
 
   @Test

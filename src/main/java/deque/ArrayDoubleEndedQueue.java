@@ -2,7 +2,7 @@ package deque;
 
 public class ArrayDoubleEndedQueue<E> implements DoubleEndedQueue<E> {
 
-    private E[] queue;
+    private Object[] queue;
 
     @Override
     public void addFirst(E e) {
@@ -26,7 +26,7 @@ public class ArrayDoubleEndedQueue<E> implements DoubleEndedQueue<E> {
 
     @Override
     public E getFirst() {
-        // return this.indexFirst;
+        return null;
     }
 
     @Override

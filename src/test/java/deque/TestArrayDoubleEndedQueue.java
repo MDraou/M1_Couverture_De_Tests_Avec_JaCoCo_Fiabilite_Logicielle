@@ -56,5 +56,32 @@ class TestArrayDoubleEndedQueue {
         assertThat(Objects.equals(queue.contains(3), true));
     }
 
+    @Test
+    void notContains() {
+        assertThat(Objects.equals(queue.contains(24), false));
+    }
 
+    @Test
+    void notAddFirst() {
+        queue.addFirst(9);
+        assertThat(!Objects.equals(queue.getFirst(), 9));
+    }
+
+    @Test
+    void notAddLast() {
+        queue.addLast(7);
+        assertThat(!Objects.equals(queue.getLast(), 7));
+    }
+
+    @Test
+    void removeFirstEmpty() {
+        queue = new ArrayDoubleEndedQueue<>(3);
+        assertThat(Objects.equals(queue.removeFirst(), null));
+    }
+
+    @Test
+    void removeLastEmpty() {
+        queue = new ArrayDoubleEndedQueue<>(3);
+        assertThat(Objects.equals(queue.removeLast(), null));
+    }
 }

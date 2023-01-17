@@ -1,5 +1,7 @@
 package deque;
 
+import java.util.Objects;
+
 public class ArrayDoubleEndedQueue<E> implements DoubleEndedQueue<E> {
 
     private Object[] queue;
@@ -71,7 +73,7 @@ public class ArrayDoubleEndedQueue<E> implements DoubleEndedQueue<E> {
     @Override
     public boolean contains(Object o) {
         for (int i = 0 ; i < capacity ; i++) {
-            if (queue[i].equals(o)) return true;
+            if (Objects.equals(queue[i],o)) return true;
         }
         return false;
     }

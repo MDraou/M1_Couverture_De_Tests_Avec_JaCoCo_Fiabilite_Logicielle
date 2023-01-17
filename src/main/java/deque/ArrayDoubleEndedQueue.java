@@ -1,34 +1,36 @@
 package deque;
 
-public class ArrayDoubleEndedQueue implements DoubleEndedQueue {
+public class ArrayDoubleEndedQueue<E> implements DoubleEndedQueue<E> {
+
+    private E[] queue;
 
     @Override
-    public void addFirst(Object o) {
+    public void addFirst(E e) {
 
     }
 
     @Override
-    public void addLast(Object o) {
+    public void addLast(E e) {
 
     }
 
     @Override
-    public Object removeFirst() {
+    public E removeFirst() {
         return null;
     }
 
     @Override
-    public Object removeLast() {
+    public E removeLast() {
         return null;
     }
 
     @Override
-    public Object getFirst() {
+    public E getFirst() {
         return null;
     }
 
     @Override
-    public Object getLast() {
+    public E getLast() {
         return null;
     }
 

@@ -42,9 +42,13 @@ class TestStringArray {
   @Test
   void testStringArray1() {
     array1 = new StringArray(slist1);
+    assertThat(array1.size()).isEqualTo(8);
+  }
+
+  @Test
+  void testStringArray2() {
     array2 = new StringArray(slist2);
     assertThat(array2.size()).isEqualTo(7);
-    assertThat(array1.size()).isEqualTo(8);
   }
 
   @Test

@@ -26,7 +26,7 @@ public class ArrayDoubleEndedQueue<E> implements DoubleEndedQueue<E> {
 
     @Override
     public E getFirst() {
-        return null;
+        // return this.indexFirst;
     }
 
     @Override
@@ -43,4 +43,5 @@ public class ArrayDoubleEndedQueue<E> implements DoubleEndedQueue<E> {
     public boolean contains(Object o) {
         return false;
     }
+
 }

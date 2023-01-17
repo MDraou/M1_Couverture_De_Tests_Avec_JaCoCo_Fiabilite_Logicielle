@@ -1,14 +1,8 @@
 package complex;
 
-/* nécessaire pour les timeout */
-
-/* importer les annotations utilisées */
-
-
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertTimeoutPreemptively;
 import static org.junit.jupiter.api.Assertions.fail;
-
 import org.assertj.core.api.DurationAssert;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
@@ -16,7 +10,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-
 import java.time.Duration;
 
 
@@ -110,7 +103,7 @@ class ComplexTest {
             .isFalse();
   }
 
-  //ajout pour 2.1 :
+  // Ajout pour la question 2.1  :
   @Test
   void testZeroTrueAndFalse() {
     Complex z = new Complex(0.0F, 1.0F);
@@ -136,7 +129,7 @@ class ComplexTest {
             .isCloseTo(expected, within(EPSILON));
   }
 
-  //@Disabled
+  // Mise en commentaire nécessaire du @Disabled ici
   @Test
   void testProductReal() {
 
@@ -148,7 +141,7 @@ class ComplexTest {
 
   }
 
-  //@Disabled
+  // Mise en commentaire nécessaire du @Disabled ici
   @Test
   void testProductImaginary() {
     float expected = 1.0F * 4.0F + 2.0F * 3.0F;

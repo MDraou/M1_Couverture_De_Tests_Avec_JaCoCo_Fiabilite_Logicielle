@@ -2,8 +2,13 @@ package palindrome;
 
 import org.junit.jupiter.api.*;
 import palindrome.Palindrome;
-
 import static org.assertj.core.api.Assertions.assertThat;
+
+
+/**
+ * Test class for the Palindrome class.
+ */
+
 
 public class TestPalindrome {
 

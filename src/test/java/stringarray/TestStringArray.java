@@ -1,12 +1,16 @@
 package stringarray;
 
 import static org.assertj.core.api.Assertions.assertThat;
-
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+
+/**
+ * Test class for the StringArray class.
+ */
 
 class TestStringArray {
   private static String[] slist1 = {
@@ -24,13 +28,11 @@ class TestStringArray {
           "ab", "c", "ab"
   };
 
-
-
   private StringArray array1;
   private StringArray array2;
   private  StringArray array3;
-
   private  StringArray array4;
+
   @BeforeAll
   static void setUpBeforeClass() throws Exception {
     System.out.println("debut des tests");
@@ -63,14 +65,18 @@ class TestStringArray {
     assertThat(array2.size()).isEqualTo(7);
   }
 
-  //2.2.5
+  /**
+   * test pour le constructeur de la classe StringArray
+   */
   @Test
   void testStringArray3() {
     array3 = new StringArray(slist3);
     assertThat(array3.size()).isEqualTo(1);
   }
 
-  //2.2.6
+  /**
+   * test pour la duplication avec "ab", "c", "ab"
+   */
   @Test
   void testStringArray4() {
     array4 = new StringArray(slist4);
@@ -90,12 +96,18 @@ class TestStringArray {
 		assertThat(array2.IndexOf("d")).isEqualTo(3);
   }
 
+  /**
+   * test pour la méthode GetString()
+   */
   @Test
   void testGetString() {
     array1 = new StringArray(slist1);
     assertThat(array1.getString(3).equals("ccc"));
   }
 
+  /**
+   * test pour la méthode GetMList()
+   */
   @Test
   void testGetMlist() {
     array2 = new StringArray(slist2);
@@ -103,6 +115,9 @@ class TestStringArray {
     assertThat(array2.getMlist().equals(expected));
   }
 
+  /**
+   * test pour la méthode size()
+   */
   @Test
   void testSize() {
     array1 = new StringArray(slist1);

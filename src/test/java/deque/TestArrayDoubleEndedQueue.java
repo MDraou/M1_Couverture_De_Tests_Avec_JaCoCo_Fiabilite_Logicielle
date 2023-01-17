@@ -2,16 +2,18 @@ package deque;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import java.util.Objects;
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+
+/**
+ * Test class for the ArrayDoubleQueue class.
+ */
 
 class TestArrayDoubleEndedQueue {
 
     private ArrayDoubleEndedQueue<Integer> queue;
-
     private Integer[] list = {0, 1, 2, 3, 4, 5};
 
 
@@ -84,4 +86,5 @@ class TestArrayDoubleEndedQueue {
         queue = new ArrayDoubleEndedQueue<>(3);
         assertThat(Objects.equals(queue.removeLast(), null));
     }
+
 }

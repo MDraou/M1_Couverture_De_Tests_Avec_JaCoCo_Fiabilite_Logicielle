@@ -68,4 +68,12 @@ class TestStringArray {
     array1 = new StringArray(slist1);
     assertThat(array1.getString(3).equals("ccc"));
   }
+
+  @Test
+  void testGetMlist() {
+    array2 = new StringArray(slist2);
+    String[] expected = {"ab", "ccd", "ccc", "g", "f", "e", "d"};
+    assertThat(array2.getMlist().equals(expected));
+  }
+
 }

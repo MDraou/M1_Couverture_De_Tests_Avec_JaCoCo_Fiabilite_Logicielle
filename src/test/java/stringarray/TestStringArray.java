@@ -63,4 +63,9 @@ class TestStringArray {
 		assertThat(array2.IndexOf("d")).isEqualTo(3);
   }
 
+  @Test
+  void testGetString() {
+    array1 = new StringArray(slist1);
+    assertThat(array1.getString(3).equals("ccc"));
+  }
 }

@@ -20,11 +20,17 @@ class TestStringArray {
           "ab", "ab"
   };
 
+  private static String[] slist4 = {
+          "ab", "c", "ab"
+  };
+
+
 
   private StringArray array1;
   private StringArray array2;
-
   private  StringArray array3;
+
+  private  StringArray array4;
   @BeforeAll
   static void setUpBeforeClass() throws Exception {
     System.out.println("debut des tests");
@@ -63,6 +69,14 @@ class TestStringArray {
     array3 = new StringArray(slist3);
     assertThat(array3.size()).isEqualTo(1);
   }
+
+  //2.2.6
+  @Test
+  void testStringArray4() {
+    array4 = new StringArray(slist4);
+    assertThat(array4.size()).isEqualTo(3);
+  }
+
 
   @Test
   void test1IndexOf() {

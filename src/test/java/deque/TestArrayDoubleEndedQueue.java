@@ -1,61 +1,60 @@
 package deque;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import stringarray.StringArray;
+
+import java.util.Objects;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class TestArrayDoubleEndedQueue {
 
-    private ArrayDoubleEndedQueue<Integer> queue1;
+    private ArrayDoubleEndedQueue<Integer> queue;
 
-    private Integer[] list1 = {0, 1, 2, 3, 4, 5};
+    private Integer[] list = {0, 1, 2, 3, 4, 5};
 
-    @Test
-    void addFirst() {
-    }
 
-    @Test
-    void addLast() {
+    @BeforeEach
+    void init() {
+        queue = new ArrayDoubleEndedQueue<>(6);
+        queue.addFirst(list[0]);
+        queue.addLast(list[1]);
+        queue.addLast(list[2]);
+        queue.addLast(list[3]);
+        queue.addLast(list[4]);
+        queue.addLast(list[5]);
     }
 
     @Test
     void removeFirst() {
+        assertThat(Objects.equals(queue.removeFirst(), 0));
     }
 
     @Test
     void removeLast() {
+        assertThat(Objects.equals(queue.removeLast(), 5));
     }
 
     @Test
     void getFirst() {
-        queue1 = new ArrayDoubleEndedQueue<Integer>();
-        assertThat(queue1.getFirst().equals(0));
+        assertThat(Objects.equals(queue.getFirst(), 0));
     }
 
     @Test
     void getLast() {
-        queue1 = new ArrayDoubleEndedQueue<Integer>();
-        assertThat(queue1.getLast().equals(4));
+        assertThat(Objects.equals(queue.getLast(), 5));
     }
 
     @Test
     void size() {
-        queue1 = new ArrayDoubleEndedQueue<Integer>();
-        assertThat(queue1.size()).isEqualTo(6);
+        assertThat(queue.size()).isEqualTo(6);
     }
 
     @Test
-    void containsFirst() {
-        queue1 = new ArrayDoubleEndedQueue<Integer>();
-        assertThat(queue1.getFirst().equals(list1[0]));
+    void contains() {
+        assertThat(Objects.equals(queue.contains(3), true));
     }
 
-    @Test
-    void containsLast() {
-        queue1 = new ArrayDoubleEndedQueue<Integer>();
-        assertThat(queue1.getLast().equals(list1[5]));
-    }
 
 }

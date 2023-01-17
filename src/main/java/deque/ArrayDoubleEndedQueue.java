@@ -12,6 +12,7 @@ public class ArrayDoubleEndedQueue<E> implements DoubleEndedQueue<E> {
 
     public ArrayDoubleEndedQueue(int capacity) {
         this.capacity = capacity;
+        this.queue = new Object[capacity];
     }
 
     @Override

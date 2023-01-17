@@ -76,4 +76,10 @@ class TestStringArray {
     assertThat(array2.getMlist().equals(expected));
   }
 
+  @Test
+  void testSize() {
+    array1 = new StringArray(slist1);
+    assertThat(array1.size()).isEqualTo(8);
+  }
+
 }

@@ -82,4 +82,10 @@ class TestStringArray {
     assertThat(array1.size()).isEqualTo(8);
   }
 
+  @Test
+  void testiemeElement() {
+    array1 = new StringArray(slist1);
+    assertThat(array1.getString(4).equals(slist1[4]));
+  }
+
 }
